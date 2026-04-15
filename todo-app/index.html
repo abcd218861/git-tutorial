@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo 待办事项</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>📝 我的待办事项</h1>
+      <p class="subtitle">高效管理每一天</p>
+    </header>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="添加新的待办事项..."
+        autocomplete="off"
+      >
+      <button id="addBtn">添加</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="active">进行中</button>
+      <button class="filter-btn" data-filter="completed">已完成</button>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <footer class="footer" id="footer">
+      <span id="counter">0 项待办</span>
+      <button id="clearCompleted">清除已完成</button>
+    </footer>
+
+    <div class="empty-state" id="emptyState">
+      <span class="empty-icon">🎉</span>
+      <p>暂无待办事项，添加一个吧！</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
